@@ -1,7 +1,7 @@
 from django.db import models
 # from portal.models import UserModel
 from django.conf import settings
-from settings import TaskmgrUserModel as UserModel
+from django.contrib.auth.models import User as UserModel
 from django.core.validators import MaxValueValidator, MinValueValidator
 from datetime import datetime
 from django.contrib import auth

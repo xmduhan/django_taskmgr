@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 from import_export.admin import ImportExportModelAdmin
 from import_export import resources
 from django.contrib.admin import SimpleListFilter
-from portal.models import UserModel
+from .models import UserModel
 from django.db.models import Q
 from more_itertools import flatten
 from functools import partial

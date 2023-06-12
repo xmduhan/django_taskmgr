@@ -128,7 +128,7 @@ class CatalogFilter(SimpleListFilter):
 class BaseTaskAdmin(DraggableMPTTAdmin, ImportExportModelAdmin):
     """ """
     inlines = [TaskInlineAdmin]
-    search_fields = ['name', 'principal__full_name', 'principal__phone']
+    search_fields = ['name', 'principal__full_name', 'principal__phone', 'id']
     autocomplete_fields = ['principal', 'parent']
     list_display = ['tree_actions', 'indented_title', 'principal', 'weight', 'get_completeness', 'get_timeline', 'get_state']
     list_filter = [CurrentUserFilter, PricipalFilter, CatalogFilter]

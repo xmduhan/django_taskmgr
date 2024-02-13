@@ -131,7 +131,7 @@ class BaseTaskAdmin(DraggableMPTTAdmin, ImportExportModelAdmin):
     search_fields = ['name', 'principal__full_name', 'principal__phone']
     autocomplete_fields = ['principal', 'parent']
     list_display = ['tree_actions', 'indented_title', 'principal', 'weight', 'get_completeness', 'get_timeline', 'get_state']
-    list_filter = [CurrentUserFilter, PricipalFilter, CatalogFilter]
+    list_filter = [CurrentUserFilter, PricipalFilter, CatalogFilter, 'state']
     fieldsets = ((
         '任务信息', {'fields': (
                 (('name', 'icon')),

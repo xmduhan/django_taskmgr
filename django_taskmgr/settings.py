@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-k@(fz!@(%g8%@ri3q5b$e9a)--6g5i==tc9!flhd0sp+75le+i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://www.qisurvey.cn']
 
 
 # Application definition
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mptt',
     'import_export',
     'taskmgr',
 ]
